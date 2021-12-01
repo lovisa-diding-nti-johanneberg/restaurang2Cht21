@@ -1,3 +1,55 @@
 body {
-  background:grey;
+  display: grid;
+  height: 200vh;
+
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: 20vh 1fr 20vh;
+  grid-template-areas:
+  'lg hd'
+  'nv mn'
+  'ft ft'
+}
+
+header {
+  grid-area: hd;
+  background-color: blue;
+}
+
+h1 {
+  padding: 1rem;
+  color: pink;
+}
+
+nav {
+  grid-area: nv;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  display:flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+a:link, a:visited {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+a:hover, a:active {
+  background-color: violet;
+}
+
+main {
+  grid-area: mn;
+  background-color: green;
+}
+
+footer {
+  grid-area: ft;
+  background-color: gold;
 }
