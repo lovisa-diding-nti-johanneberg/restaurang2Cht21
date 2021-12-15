@@ -1,37 +1,43 @@
 body {
+  background-color: pink;
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
   height: 200vh;
 
   grid-template-columns: 15% 1fr;
-  grid-template-rows: 20vh 1fr 20vh;
+  grid-template-rows: 8rem 1fr 20vh;
   grid-template-areas:
-  'lg hd'
+  'hd hd'
   'nv mn'
   'ft ft'
 }
 
 header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
   grid-area: hd;
-  background-color: darkgreen;
+  background-color: #000000;
+  border-bottom-color: white;
+  display: flex;
+  justify-content: left;
+  height: 8rem;
 }
 
 h1 {
-  padding: 1rem;
   color: pink;
   font-size: 3rem;
 }
 
 #logo {
-  grid-area: lg;
-  background-color: darkgreen;
+  display: flex;
+  justify-content: center;
 }
 
 nav {
   grid-area: nv;
-  background-image: url("../img/images.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: darkgreen;
   display: flex;
   flex-direction: column;
 }
@@ -41,6 +47,7 @@ nav a {
   justify-content: center;
   padding: 2rem;
   background-color: green;
+  border-radius: 2rem;
 }
 
 a:link, a:visited {
@@ -55,6 +62,7 @@ a:hover, a:active {
 }
 
 main {
+
   grid-area: mn;
   background-color: white;
   padding: 2rem;
@@ -62,7 +70,7 @@ main {
 
 footer {
   grid-area: ft;
-  background-color: gold;
+  background-color: #ffc0cb;
 }
 
 #saladCollage {
